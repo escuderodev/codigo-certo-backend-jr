@@ -8,7 +8,7 @@ const PORT = process.env.PORT
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = process.env.DB_PASSWORD
 
-mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@postech.1kgukn8.mongodb.net/postech?retryWrites=true&w=majority&appName=postech`)
+mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@tarefas-api-cluster.ge8mzhh.mongodb.net/tarefas-api-cluster?retryWrites=true&w=majority&appName=tarefas-api-cluster`)
 .then(() => {
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`)
