@@ -22,7 +22,7 @@ export class UserRepository {
     }
 
     async getByEmail(email: string) {
-        const userSearch = await User.findOne({email: email})
+        const userSearch = await User.findOne({email: email}, 'password')
         return userSearch
     }
 

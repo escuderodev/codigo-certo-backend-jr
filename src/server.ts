@@ -2,6 +2,7 @@ import express, { json } from "express"
 import "dotenv/config"
 import mongoose from "mongoose"
 import { userRouter } from "../src/routes/userRoutes"
+import { taskRouter } from "./routes/taskRoutes"
 
 const app = express()
 const PORT = process.env.PORT
@@ -18,3 +19,4 @@ mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@tarefas-api-cluster.ge
 
 app.use(json())
 app.use(userRouter)
+app.use(taskRouter)
